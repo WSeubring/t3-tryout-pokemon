@@ -1,28 +1,26 @@
-# Create T3 App
+# T3 Playgroud app
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This web-applications is used as a playground to explore different technologies, frameworks and ideas.
 
-## What's next? How do I make an app with this?
+## Start development
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+`git clone`
+`yarn install`
+`yarn dev`
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Start 'production' server
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+`yarn build`
+`yarn start`
 
-## Learn More
+## List of frameworks, libraries and technologies
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- [x] Add Google integration [Next Auth](https://nextjs.org/)
+- [ ] Query with [tRPC](https://trpc.io/)
+- [ ] Mutations with [tRPC](https://trpc.io/)
+- [ ] Infinite Query with [tRPC](https://trpc.io/)
+- [ ] Forms with [react-hook-form](https://react-hook-form.com/) and/or [Formik](https://formik.org/)
+- [ ] Static server side rendering with [Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths)
+- [ ] Server side props with [Next.js](https://nextjs.org/docs/basic-features/data-fetching/getServerSideProps)
+- [ ] Explore component of [Headless UI](https://headlessui.dev/)
+- [ ] Animations with [Framer Motion](https://www.framer.com/motion/)
