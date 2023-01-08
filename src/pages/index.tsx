@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           ) : (
             <div className="flex w-[80vw] flex-wrap gap-4 rounded-lg border bg-white p-4 text-lg font-semibold shadow-md">
               {typesQuery.data?.results.map((type, i) => (
-                <motion.div
+                <motion.button
                   animate={{
                     scale: [0, 1.1, 1],
                     rotate: [0, 5, 0],
@@ -39,14 +39,20 @@ const Home: NextPage = () => {
                       delay: i * 0.05,
                     },
                   }}
+                  whileHover={{
+                    rotate: 5,
+                    transition: {
+                      duration: 0.2,
+                    },
+                  }}
                   className={twMerge(
-                    "rounded-md border border-gray-400 px-5 py-3 ",
+                    "cursor-pointer rounded-md border border-gray-400 px-5 py-3",
                     pokemonTypeToColor(type.name)
                   )}
                   key={type.name}
                 >
                   <span className="font-semibold text-black">{type.name}</span>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
           )}
