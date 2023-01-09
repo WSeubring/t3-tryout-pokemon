@@ -40,3 +40,46 @@ export const pokemonTypeToColor = (type: string) => {
       return "bg-gray-300";
   }
 };
+
+export const getTypePath = (type: string) => {
+  switch (type) {
+    case "normal":
+      return "/img/normal.png";
+    case "fire":
+      return "/img/fire.png";
+    case "water":
+      return "/img/water.png";
+    case "grass":
+      return "/img/grass.png";
+    case "electric":
+      return "/img/electric.png";
+    case "ice":
+      return "/img/ice.webp";
+    case "fighting":
+      return "/img/fighting.png";
+    case "poison":
+      return "/img/poison.png";
+    case "ground":
+      return "/img/ground.webp";
+    case "flying":
+      return "/img/flying.webp";
+    case "psychic":
+      return "/img/psychic.png";
+    case "bug":
+      return "/img/bug.png";
+    case "rock":
+      return "/img/rock.png";
+    case "ghost":
+      return "/img/ghost.png";
+    case "dragon":
+      return "/img/dragon.png";
+    case "dark":
+      return "/img/dark.png";
+    case "steel":
+      return "/img/steel.png";
+    case "fairy":
+      return "/img/fairy.png";
+    default:
+      return "";
+  }
+};
