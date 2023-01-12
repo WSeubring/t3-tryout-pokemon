@@ -67,18 +67,9 @@ const Fusionmon: NextPage = () => {
             </button>
           </div>
         )}
-
-        {/* <button
-          ref={ref}
-          onClick={() => {
-            listPokemonsQuery.fetchNextPage().catch((err) => console.log(err));
-          }}
-        >
-          Load More
-        </button> */}
       </main>
     </>
   );
 };
 
-export default Home;
+export default Fusionmon;

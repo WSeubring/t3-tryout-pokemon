@@ -3,13 +3,32 @@ import { z } from "zod";
 import { createTRPCRouter, publicProcedure, protectedProcedure } from "../trpc";
 
 import { PokemonClient } from "pokenode-ts";
+import { FusionClient } from "../../client/fusionClient";
 
 const api = new PokemonClient();
+const fusionApi = new FusionClient();
 
 export const pokemonRouter = createTRPCRouter({
-  listTypes: publicProcedure.query(() => {
-    return api.listTypes();
-  }),
+  listFusionmon: publicProcedure
+    .input(
+      z.object({
+        limit: z.number().nullish(),
+        cursor: z.number().nullish(),
+      })
+    )
+    .query(async ({ input }) => {
+      const limit = input?.limit ?? 20;
+      const cursor = input?.cursor ?? 0;
+
+      const promises = Object.keys(Array(limit).fill(0)).map(() =>
+        fusionApi.getFusionmon()
+      );
+
+      return {
+        items: await Promise.all(promises),
+        nextCursor: cursor + limit,
+      };
+    }),
   listPokemon: publicProcedure
     .input(
       z.object({
@@ -27,6 +46,7 @@ export const pokemonRouter = createTRPCRouter({
       }
 
       const items = await Promise.all(promises);
+
       return {
         items,
         nextCursor: cursor + limit,
