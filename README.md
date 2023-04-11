@@ -19,7 +19,7 @@ This web-applications is used as a playground to explore different technologies,
 - [X] Query with [tRPC](https://trpc.io/)
 - [X] Mutations with [tRPC](https://trpc.io/)
 - [X] Infinite Query with [tRPC](https://trpc.io/)
-- [] Forms with [react-hook-form](https://react-hook-form.com/) and/or [Formik](https://formik.org/)
+- [ ] Forms with [react-hook-form](https://react-hook-form.com/) and/or [Formik](https://formik.org/)
 - [ ] Static server side rendering with [Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths)
 - [ ] Server side props with [Next.js](https://nextjs.org/docs/basic-features/data-fetching/getServerSideProps)
 - [ ] Explore component of [Headless UI](https://headlessui.dev/)
